@@ -2,7 +2,7 @@ import React from "react";
 
 import Playlists from "./Playlists";
 
-const Categories = () => {
+const Categories = (props) => {
   const dataCategories = [
     {
       id: 1,
@@ -26,9 +26,9 @@ const Categories = () => {
     },
   ];
   return (
-    <div className="categories">
-      {dataCategories.map((category) => (
-        <div className="cardsWrap">
+    <div className="mainInner">
+      {dataCategories.map((category, id) => (
+        <div className="cardsWrap" key={id}>
           <h2>{category.name}</h2>
           {/*<span className="seeALl">SEE ALL</span>*/}
           <p className="subtitle">{category.tagline}</p>
