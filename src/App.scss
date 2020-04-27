@@ -14,10 +14,23 @@ $greenMain: #1db954;
 }
 
 @font-face {
-  font-family: spotify-circular-bold;
+  font-family: spotify-circular;
   src: url("./assets/fonts/spotify-circular-bold.woff2") format("woff2");
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: spotify-circular;
+  src: url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.c21e63c5.woff2")
+      format("woff2"),
+    url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.effa986f.woff")
+      format("woff"),
+    url("https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.ce8ef887.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 900;
   font-display: swap;
 }
 
@@ -79,7 +92,7 @@ body {
       font-size: 0.9rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      font-family: spotify-circular-bold;
+      font-weight: 900;
       display: flex;
       align-items: center;
 
@@ -135,8 +148,8 @@ body {
 }
 
 .upperNav {
-  background: rgba(8, 8, 8, 1);
-  height: 54px;
+  background: rgba(9, 9, 9, 0.8);
+  height: 56px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -195,7 +208,7 @@ body {
     border-radius: 10px;
     margin-right: 1.2rem;
     width: 190px;
-    height: 290px;
+    height: 260px;
     overflow: hidden;
     padding: 1.2rem;
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
@@ -262,10 +275,21 @@ body {
   }
 }
 
-.playlistPage {
-  display: flex;
-  background-color: rgb(139, 139, 139);
+.uppercase {
+  text-transform: uppercase;
+}
 
+.smallText {
+  font-size: 0.75rem;
+  letter-spacing: 0.8px;
+
+  &.bold {
+    font-weight: 600;
+  }
+}
+
+.playlistPage {
+  background-color: rgb(214, 214, 214);
   .mainInner {
     background-image: -webkit-gradient(
       linear,
@@ -277,28 +301,151 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), $greyLight 40%);
     width: 100%;
     display: flex;
-
-    /* TESTING FOR SMOOTH CORNERS
-    border-top-left-radius: 40px;
-    box-shadow: -50vh -50vh rgb(8, 8, 8); */
+    flex-direction: column;
   }
 
   .playlistInfo {
-    width: 300px;
+    //width: 300px;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
+    display: flex;
+
+    .playlistContent {
+      text-align: left;
+      padding: 1.5rem 2rem;
+
+      h1 {
+        font-size: 6rem;
+        margin: 0;
+        line-height: 1em;
+        letter-spacing: -0.24rem;
+        font-weight: 900;
+      }
+
+      .tagline {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+      }
+
+      .playlistDesc {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+
+        p {
+          margin: 0;
+        }
+
+        span {
+          opacity: 0.7;
+          position: relative;
+
+          &:before {
+            content: "\2022";
+            margin: 0 4px;
+          }
+        }
+      }
+    }
 
     .playlistImage {
       width: 250px;
       height: 250px;
-      margin: auto;
 
       img {
         height: 100%;
         width: 100%;
         border-radius: 0.5rem;
         object-fit: cover;
+        -webkit-box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
       }
     }
   }
+
+  .playlistSongs {
+    height: 100%;
+    .playlistButtons {
+      display: flex;
+      align-items: center;
+    }
+    .playIcon {
+      @extend .playIcon;
+      opacity: 1;
+      position: relative;
+      margin-left: 0;
+      height: 56px;
+      width: 56px;
+      right: 0;
+      bottom: 0;
+      svg {
+        height: 26px;
+        width: 26px;
+      }
+    }
+    .icons {
+      .icon {
+        margin-left: 1.5rem;
+      }
+      .iconsHeart {
+        width: 28px;
+        height: 28px;
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}
+ul.songList {
+  padding: 0;
+  li {
+    list-style-type: none;
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s ease-in-out;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      .songIcon {
+        .noteI {
+          display: none;
+        }
+        .playI {
+          display: block;
+        }
+      }
+    }
+    .songDetails {
+      h3 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 1rem;
+      }
+      span {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+      }
+    }
+    .songTime {
+      margin-left: auto;
+    }
+    .songIcon {
+      padding-right: 1rem;
+      .playI {
+        display: none;
+      }
+      svg {
+        fill: rgba(255, 255, 255, 0.7);
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.spotify {
+  font-weight: 900;
 }

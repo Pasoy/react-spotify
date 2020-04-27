@@ -29,7 +29,9 @@ const Categories = (props) => {
     <div className="mainInner">
       {dataCategories.map((category, id) => (
         <div className="cardsWrap" key={id}>
-          <h2>{category.name}</h2>
+          <h2>
+            <span>{category.name}</span>
+          </h2>
           {/*<span className="seeALl">SEE ALL</span>*/}
           <p className="subtitle">{category.tagline}</p>
           <Playlists category_id={category.id} />

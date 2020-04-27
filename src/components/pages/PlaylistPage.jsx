@@ -1,8 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
+import { ReactComponent as PlayIcon } from "../../assets/svg/play.svg";
+import { ReactComponent as HeartIcon } from "../../assets/svg/heart.svg";
+import { ReactComponent as NoteIcon } from "../../assets/svg/note.svg";
 
 const PlaylistPage = () => {
-  const { id } = useParams();
+  //const { id } = useParams();
 
   return (
     <div className="playlistPage">
@@ -10,27 +13,114 @@ const PlaylistPage = () => {
         <div className="playlistInfo">
           <div className="playlistImage">
             <img
-              src="https://i.scdn.co/image/ab67706f0000000229a474cf9edc5e08a2b66d48"
-              alt="eminem"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Favvesione.files.wordpress.com%2F2014%2F05%2Fjojos_bizarre_adventure_stardust_crusaders-06-jotaro-stoic-calm-wet-awesome-intimidating.jpg&f=1&nofb=1"
+              alt="pic"
             />
           </div>
-          <h1>All Out 00s</h1>
-          <p>Spotify {id}</p>
-          <button>Play</button>
-          <div className="icons">
-            <div className="iconsHeart"></div>
-            <div className="iconsDots"></div>
+          <div className="playlistContent">
+            <p className="smallText uppercase bold">Playlist</p>
+            <h1>The New Alt</h1>
+
+            <p className="tagline">Some cool playlist for yall.</p>
+            <div className="playlistDesc">
+              <p className="spotify">Spotify</p>
+              <span>20,420 likes</span>
+              <span>2hr 10 min</span>
+            </div>
           </div>
-          <p>
-            Essential tracks from the decade that catapulted electronic music,
-            hip hop and indie rock into the mainstream.
-          </p>
         </div>
         <div className="playlistSongs">
-          <ul>
-            {[...Array(10)].map((x, i) => (
-              <li>Song {i + 1}</li>
-            ))}
+          <div className="playlistButtons">
+            <span className="playIcon">
+              <PlayIcon />
+            </span>
+            <div className="icons">
+              <div className="icon iconsHeart">
+                <HeartIcon />
+              </div>
+              <div className="icon iconsDots"></div>
+            </div>
+          </div>
+
+          <ul className="songList">
+            <li>
+              <div className="songIcon">
+                <NoteIcon className="noteI" />
+                <PlayIcon className="playI" />
+              </div>
+              <div className="songDetails">
+                <h3>Held Down</h3>
+                <span>Laura Marling</span>
+              </div>
+              <div className="songTime">
+                <span>4:07</span>
+              </div>
+            </li>
+            <li>
+              <div className="songIcon">
+                <NoteIcon className="noteI" />
+                <PlayIcon className="playI" />
+              </div>
+              <div className="songDetails">
+                <h3>Held Down</h3>
+                <span>Laura Marling</span>
+              </div>
+              <div className="songTime">
+                <span>4:07</span>
+              </div>
+            </li>
+            <li>
+              <div className="songIcon">
+                <NoteIcon className="noteI" />
+                <PlayIcon className="playI" />
+              </div>
+              <div className="songDetails">
+                <h3>Held Down</h3>
+                <span>Laura Marling</span>
+              </div>
+              <div className="songTime">
+                <span>4:07</span>
+              </div>
+            </li>
+            <li>
+              <div className="songIcon">
+                <NoteIcon className="noteI" />
+                <PlayIcon className="playI" />
+              </div>
+              <div className="songDetails">
+                <h3>Held Down</h3>
+                <span>Laura Marling</span>
+              </div>
+              <div className="songTime">
+                <span>4:07</span>
+              </div>
+            </li>
+            <li>
+              <div className="songIcon">
+                <NoteIcon className="noteI" />
+                <PlayIcon className="playI" />
+              </div>
+              <div className="songDetails">
+                <h3>Held Down</h3>
+                <span>Laura Marling</span>
+              </div>
+              <div className="songTime">
+                <span>4:07</span>
+              </div>
+            </li>
+            <li>
+              <div className="songIcon">
+                <NoteIcon className="noteI" />
+                <PlayIcon className="playI" />
+              </div>
+              <div className="songDetails">
+                <h3>Held Down</h3>
+                <span>Laura Marling</span>
+              </div>
+              <div className="songTime">
+                <span>4:07</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
