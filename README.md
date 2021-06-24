@@ -68,3 +68,51 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+<style>
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+img.icon {
+	border-radius: 3px;
+}
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+mark {
+	background-color: transparent;
+}
+
+
+</style>
+
+Git is as a ***distributed version control system*** (VCS).  
+
+It is a system that tracks changes project files over time. It enables us to record project changes and go back to a specific version of the tracked files. This system can be used by many people to efficiently work together and **<span style="border-bottom:0.05em solid">collaborate on team projects**</span>, where each developer can have their own version of the project, distributed on their computer. Later on, these individual versions of the project can be merged and adapted into the main version of the project.  
+
+Basically, it is a popular tool for coordinating parallel work and managing projects among individuals and teams. Knowing how to use Git is one of the most important skills for any developer!  
+
+<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"><div style="font-size:1.5em"><span class="icon">ℹ️</span></div><div style="width:100%"><mark class="highlight-blue">Git official homepage: </mark><mark class="highlight-blue"><a href="https://git-scm.com/">https://git-scm.com/</a></mark></div></figure>
