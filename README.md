@@ -1,3 +1,43 @@
+
+<style>
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+img.icon {
+	border-radius: 3px;
+}
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+mark {
+	background-color: transparent;
+}
+
+
+</style>
+
 Live preview on [React-Spotify](https://pasoy.github.io/react-spotify/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -70,44 +110,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 
-<style>
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-.block-color-gray_background {
-	background: rgb(235,236,237);
-}
-.highlight-blue {
-	color: rgb(11,110,153);
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-img.icon {
-	border-radius: 3px;
-}
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-mark {
-	background-color: transparent;
-}
-
-
-</style>
 
 Git is as a ***distributed version control system*** (VCS).  
 
